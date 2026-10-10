@@ -55,6 +55,8 @@ pytest -q                  # tests (no network, no models needed)
 ## Output
 Notes on this real run (Llama 3.1 8B via Ollama). The model saved only the vegetarian fact and skipped Pune, even though its reply implied both were saved; recall shows what was actually stored. It correctly proposed “The user has a lawyer brother,” and MiniEval still held it for review because its attribution guard fires on “my brother” sentences, a known false positive of a deliberately conservative design. The /propose step then staged a faulty extraction (“The user is a lawyer”), which was held correctly.
 
+<img width="1920" height="1080" alt="Screenshot 2026-10-10 094410" src="https://github.com/user-attachments/assets/c7ed55e9-5af7-4b53-a371-8288f39b8054" />
+
 
 ## Honest limits
 - The demo's `/propose` step is staged (see above).
